@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
+import DevOpsCourse from "./pages/DevOpsCourse";
+import SQLCourse from "./pages/SQLCourse";
+import PythonCourse from "./pages/PythonCourse";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +25,9 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/success-stories" element={<SuccessStories />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/courses/devops" element={<DevOpsCourse />} />
+          <Route path="/courses/sql" element={<SQLCourse />} />
+          <Route path="/courses/python" element={<PythonCourse />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

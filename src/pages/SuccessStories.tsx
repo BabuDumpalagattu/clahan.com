@@ -5,21 +5,24 @@ import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+
+
+
 const SuccessStories = () => {
   const corporateClients = [
-    { name: "Oracle", logo: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=200&h=100&fit=crop" },
-    { name: "Wipro", logo: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&h=100&fit=crop" },
-    { name: "Comcast", logo: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=200&h=100&fit=crop" },
-    { name: "Shell", logo: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=200&h=100&fit=crop" },
-    { name: "IOPEX", logo: "https://images.unsplash.com/photo-1487252665478-49b61b47f302?w=200&h=100&fit=crop" },
-    { name: "Gainsight", logo: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=200&h=100&fit=crop" },
-    { name: "CRIS", logo: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&h=100&fit=crop" },
-    { name: "KickDrum", logo: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=200&h=100&fit=crop" },
-    { name: "PublisSapient", logo: "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=200&h=100&fit=crop" },
-    { name: "ACL Digital", logo: "https://images.unsplash.com/photo-1487252665478-49b61b47f302?w=200&h=100&fit=crop" },
-    { name: "Citibank", logo: "https://images.unsplash.com/photo-1551038247-3d9af20df552?w=200&h=100&fit=crop" },
-    { name: "FSS (Powering Payments)", logo: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=200&h=100&fit=crop" },
-    { name: "Capgemini", logo: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=200&h=100&fit=crop" }
+    { name: "Oracle", logo: "/img/oracle.png" },
+    { name: "Wipro", logo: "/img/wipro.png" },
+    { name: "Comcast", logo: "/img/comcast.png" },
+    { name: "Shell", logo: "/img/shell.png" },
+    { name: "IOPEX", logo: "/img/IOPEX.png" },
+    { name: "Gainsight", logo: "/img/gain.png" },
+    { name: "CRIS", logo: "/img/irctc.png" },
+    { name: "KickDrum", logo: "/img/kickdrum.png" },
+    { name: "PublisSapient", logo: "/img/ps.png" },
+    { name: "ACL Digital", logo: "/img/acl.png" },
+    { name: "Citibank", logo: "/img/citibank.png" },
+    { name: "FSS (Powering Payments)", logo: "/img/fss.png" },
+    { name: "Capgemini", logo: "/img/cap.png" }
   ];
 
   const stats = [
@@ -111,14 +114,22 @@ const SuccessStories = () => {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                      {/* <Cloud className="h-8 w-8 text-white" /> */}
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-gray-900">CIVO</h3>
-                      <p className="text-gray-600">Cloud Service Provider Partner</p>
-                    </div>
-                  </div>
+<div className="flex items-center mb-6">
+  <div className="w-20 h-16 rounded-lg overflow-hidden mr-4 bg-white shadow-sm">
+    <img 
+      src="/img/civo.png" 
+      alt="CIVO logo" 
+      className="w-full h-full object-contain"
+    />
+  </div>
+  <div>
+    <h3 className="text-3xl font-bold text-gray-900">CIVO</h3>
+    <p className="text-gray-600">Cloud Service Provider Partner</p>
+  </div>
+</div>
+</div>
+
+
                   
                   <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                     Partnered with CIVO, the cloud native service provider that offers simple, fast, and affordable 
@@ -154,13 +165,15 @@ const SuccessStories = () => {
                 </div>
                 
                 <div className="bg-gray-50 rounded-lg p-6 text-center">
-                  <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center mx-auto mb-4">
-                    <img 
-                      src="https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=200&h=200&fit=crop" 
-                      alt="CIVO logo"
-                      className="w-24 h-24 object-contain rounded"
-                    />
-                  </div>
+                
+                  <div className="w-32 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center mx-auto mb-4">
+                     <img 
+                         src="/img/civo.png" 
+                         alt="CIVO logo"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
+
                   <h4 className="text-2xl font-bold text-gray-900 mb-2">CIVO</h4>
                   <p className="text-gray-600 mb-4">The cloud native service provider</p>
                   <Badge className="bg-green-100 text-green-700">Strategic Partner</Badge>
@@ -225,9 +238,16 @@ const SuccessStories = () => {
                 </div>
                 <div className="bg-white rounded-lg p-6 shadow-sm">
                   <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {/* <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-white font-bold text-2xl">SK</span>
-                    </div>
+                    </div> */}
+                    <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 shadow-md">
+  <img 
+    src="/img/sals.png"  // ⬅️ Replace with your logo path
+    alt="SK Logo" 
+    className="w-full h-full object-cover"
+  />
+</div>
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">SalesKen.ai</h4>
                     <p className="text-gray-600 mb-4">AI-Powered Sales Platform</p>
                     <Badge className="bg-green-100 text-green-700">Azure DevOps Success</Badge>

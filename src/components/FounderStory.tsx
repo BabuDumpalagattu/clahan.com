@@ -84,7 +84,7 @@
 
 // export default FounderStory;
 
-import { Quote, Linkedin, Twitter } from 'lucide-react';
+import { Quote, Linkedin, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import founderImage from '../img/muraliimage.png';
@@ -144,8 +144,8 @@ const FounderStory = () => {
                     </a>
 
                     <Button variant="outline" size="sm" className="flex items-center justify-center w-full sm:w-auto">
-                      <Twitter className="h-4 w-4 mr-2" />
-                      Follow on Twitter
+                      <X className="h-4 w-4 mr-2" />
+                      Follow on X
                     </Button>
                   </div>
                 </div>
