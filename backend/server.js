@@ -35,6 +35,16 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).json({ error: 'Server error, please try again later.' });
   }
 });
+//for messages
+app.get('/api/messages', async (req, res) => {
+  try {
+    const messages = await ContactMessage.find().sort({ createdAt:  1}); // newest first
+    res.json(messages);
+  } catch (error) {
+    console.error('Error fetching messages:', error);
+    res.status(500).json({ error: 'Server error while fetching messages' });
+  }
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

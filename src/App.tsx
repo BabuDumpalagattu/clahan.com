@@ -11,6 +11,7 @@ import DevOpsCourse from "./pages/DevOpsCourse";
 import SQLCourse from "./pages/SQLCourse";
 import PythonCourse from "./pages/PythonCourse";
 import NotFound from "./pages/NotFound";
+import MessagesTable from "./pages/MessagesTable";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/courses/devops" element={<DevOpsCourse />} />
           <Route path="/courses/sql" element={<SQLCourse />} />
           <Route path="/courses/python" element={<PythonCourse />} />
+             <Route path="messages" element={<MessagesTable />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
