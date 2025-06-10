@@ -95,9 +95,11 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 w-full"></header>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+            <Link to="/" className="flex items-center z-50"></Link>
           <div className="flex items-center">
             <img src={Logo} alt="Clahan Logo" className="w-30 h-10 mr-3" />
             {/* <span className="text-xl font-bold text-gray-900">Clahan Technologies</span> */}
@@ -135,7 +137,8 @@ const Header = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2"
+          // className="md:hidden p-2"
+            className="md:hidden p-2 z-50 relative"            
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -163,8 +166,8 @@ const Header = () => {
                   <ChevronDown className={`h-4 w-4 transition-transform ${isMobileCoursesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
-                {isMobileCoursesOpen && (
-                  <div className="pl-4 space-y-2">
+                {isMobileCoursesOpen && (                  
+          <div className="md:hidden fixed top-16 left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-40 max-h-[calc(100vh-4rem)] overflow-y-auto">
                     <Link 
                       to="/courses/devops" 
                       className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
