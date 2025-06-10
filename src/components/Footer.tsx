@@ -43,9 +43,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Our Courses</a></li>
+              {/* <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Our Courses</a></li> */}
               <li><a href="/success-stories" className="text-gray-300 hover:text-white transition-colors">Success Stories</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Career Support</a></li>
+              <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
             </ul>
@@ -55,12 +55,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Courses</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">DevOps Fundamentals</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">DevSecOps Professional</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Cloud Native DevOps</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Kubernetes Mastery</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">CI/CD Pipeline</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Infrastructure as Code</a></li>
+              <li><a href="/courses/devops" className="text-gray-300 hover:text-white transition-colors">DevSecOps & DevSecOps</a></li>
+              <li><a href="/courses/python" className="text-gray-300 hover:text-white transition-colors">Python</a></li>
+              <li><a href="/courses/sql" className="text-gray-300 hover:text-white transition-colors">SQL and Database</a></li>
             </ul>
           </div>
 
