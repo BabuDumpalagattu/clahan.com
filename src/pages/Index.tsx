@@ -19,7 +19,7 @@ const Index = () => {
       description: "Advanced security integration in DevOps workflows and compliance frameworks",
       duration: "16 weeks", 
       level: "Advanced",
-      price: "$399",
+      price: "₹18000",
       features: ["Security Tools", "Kubernetes", "Docker", "Cloud Platforms", "Microservices","Compliance", "Advanced Projects", "Mentorship"],
       image: "photo-1498050108023-c5249f4df085"
     },
@@ -40,6 +40,26 @@ const Index = () => {
       price: "soon",
       features: ["DDL", "DML", "DQL", "TCL","JOINS"],
       image: "photo-1488590528505-98d2b5aba04b"
+    }
+  ];
+    const bannerSlides = [
+    {
+      id: 1,
+      title: "New DevOps Batch Starting Soon!",
+      subtitle: "Join Our Next Cohort - Limited Seats Available",
+      description: "Transform your career with our comprehensive DevOps training program. Expert instructors, hands-on projects, and job guarantee.",
+      image: "photo-1649972904349-6e44c42644a7",
+      ctaText: "Enroll Now",
+      bgGradient: "from-blue-600 to-purple-600"
+    },
+    {
+      id: 2,
+      title: "Python & SQL Courses Open!",
+      subtitle: "Master Programming & Database Skills",
+      description: "Build your foundation in programming and data management. Perfect for beginners and career switchers.",
+      image: "photo-1518770660439-4636190af475",
+      ctaText: "View Courses",
+      bgGradient: "from-green-600 to-blue-600"
     }
   ];
 
@@ -150,6 +170,63 @@ const Index = () => {
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-bounce"></div>
         <div className="absolute bottom-20 right-10 w-16 h-16 bg-green-200 rounded-full opacity-20 animate-bounce" style={{animationDelay: '1s'}}></div>
+         </section>
+
+      {/* Banner Slider Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {bannerSlides.map((slide) => (
+                  <CarouselItem key={slide.id}>
+                    <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-r ${slide.bgGradient} text-white`}>
+                      <div className="absolute inset-0 bg-black/20"></div>
+                      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between p-8 lg:p-12">
+                        <div className="flex-1 mb-8 lg:mb-0 lg:mr-8">
+                          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+                            {slide.title}
+                          </h2>
+                          <h3 className="text-xl lg:text-2xl mb-4 opacity-90">
+                            {slide.subtitle}
+                          </h3>
+                          <p className="text-lg mb-6 opacity-80 max-w-2xl">
+                            {slide.description}
+                          </p>
+                          <Button 
+                            size="lg" 
+                            variant="secondary" 
+                            className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3"
+                          >
+                            {slide.ctaText}
+                            <ArrowRight className="ml-2 h-5 w-5" />
+                          </Button>
+                        </div>
+                        <div className="flex-shrink-0">
+                          <div className="w-80 h-60 lg:w-96 lg:h-72 rounded-xl overflow-hidden shadow-2xl">
+                            <img
+                              src={`https://images.unsplash.com/${slide.image}?auto=format&fit=crop&w=800&q=80`}
+                              alt={slide.title}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
+          </div>
+        </div>
       </section>
 
       {/* Stats Section */}

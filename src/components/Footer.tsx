@@ -1,6 +1,6 @@
 
 // import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, X } from 'lucide-react';
+import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, X, Youtube } from 'lucide-react';
 
 import Logo from '../img/Logo.svg'; // adjust this path if needed
 
@@ -23,17 +23,20 @@ const Footer = () => {
               Join thousands of successful graduates who transformed their careers.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="https://www.facebook.com/clahantechnologies" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <X className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/company/99364695/admin/dashboard/" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="https://www.instagram.com/clahan_technologies/" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Instagram className="h-5 w-5" />
+              </a>
+               <a href="https://www.youtube.com/@Clahan_Technologies" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -87,7 +90,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Clahan Technologies. All rights reserved.
+            © 2025 Clahan Technologies. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
